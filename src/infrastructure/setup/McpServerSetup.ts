@@ -1,14 +1,14 @@
 import {GetRepoInputSchema} from "../../domain/contracts/schemas/GetRepoInputSchema.js";
 import {GetFileInputSchema} from "../../domain/contracts/schemas/GetFileInputSchema.js";
 import {BrowseDirectoryInputSchema} from "../../domain/contracts/schemas/BrowseDirectoryInputSchema.js";
-import {AddBranchInputSchema} from "../../domain/contracts/schemas/AddBranchInputSchema.js";
-import {AddPrCommentInputSchema} from "../../domain/contracts/schemas/AddPrCommentInputSchema.js";
+// import {AddBranchInputSchema} from "../../domain/contracts/schemas/AddBranchInputSchema.js";
+// import {AddPrCommentInputSchema} from "../../domain/contracts/schemas/AddPrCommentInputSchema.js";
 import {ListBranchesInputSchema} from "../../domain/contracts/schemas/ListBranchesInputSchema.js";
-import {CreatePullRequestInputSchema} from '../../domain/contracts/schemas/CreatePullRequestInputSchema.js';
+// import {CreatePullRequestInputSchema} from '../../domain/contracts/schemas/CreatePullRequestInputSchema.js';
 import {GetPullRequestInputSchema} from '../../domain/contracts/schemas/GetPullRequestInputSchema.js';
-import {MergePullRequestInputSchema} from '../../domain/contracts/schemas/MergePullRequestInputSchema.js';
-import {DeclinePullRequestInputSchema} from '../../domain/contracts/schemas/DeclinePullRequestInputSchema.js';
-import {AddCommentInputSchema} from '../../domain/contracts/schemas/AddCommentInputSchema.js';
+// import {MergePullRequestInputSchema} from '../../domain/contracts/schemas/MergePullRequestInputSchema.js';
+// import {DeclinePullRequestInputSchema} from '../../domain/contracts/schemas/DeclinePullRequestInputSchema.js';
+// import {AddCommentInputSchema} from '../../domain/contracts/schemas/AddCommentInputSchema.js';
 import {zodToJsonSchema} from 'zod-to-json-schema';
 import {GetDiffInputSchema} from '../../domain/contracts/schemas/GetDiffInputSchema.js';
 import {ListWorkspacesInputSchema} from '../../domain/contracts/schemas/ListWorkspacesInputSchema.js';
@@ -77,12 +77,12 @@ export class McpServerSetup {
         }
 
         this.definedTools = [
-            {
+            /* {
                 name: 'bitbucket_create_pull_request',
                 description: 'Creates a new Bitbucket pull request',
                 inputSchema: zodToJsonSchema(CreatePullRequestInputSchema),
                 handler: this.createValidatedHandler('bitbucket_create_pull_request', CreatePullRequestInputSchema, this.bitbucketUseCase.bitbucketCreatePullRequest.bind(this.bitbucketUseCase))
-            },
+            }, */
             {
                 name: 'bitbucket_get_pull_request_details',
                 description: 'Gets details for a Bitbucket pull request',
@@ -137,18 +137,18 @@ export class McpServerSetup {
                 inputSchema: zodToJsonSchema(BrowseDirectoryInputSchema),
                 handler: this.createValidatedHandler('bitbucket_browse_directory', BrowseDirectoryInputSchema, this.bitbucketUseCase.bitbucketBrowseDirectory.bind(this.bitbucketUseCase))
             },
-            {
+            /* {
                 name: 'bitbucket_create_branch',
                 description: 'Creates a new branch in a Bitbucket repository.',
                 inputSchema: zodToJsonSchema(AddBranchInputSchema),
                 handler: this.createValidatedHandler('bitbucket_create_branch', AddBranchInputSchema, this.bitbucketUseCase.bitbucketCreateBranch.bind(this.bitbucketUseCase))
-            },
-            {
+            }, */
+            /* {
                 name: 'bitbucket_add_pull_request_file_line_comment',
                 description: 'Adds a comment to a Bitbucket pull request, optionally as an inline comment on a specific file and line.',
                 inputSchema: zodToJsonSchema(AddPrCommentInputSchema),
                 handler: this.createValidatedHandler('bitbucket_add_pull_request_file_line_comment', AddPrCommentInputSchema, this.bitbucketUseCase.bitbucketAddPullRequestFileLineComment.bind(this.bitbucketUseCase))
-            },
+            }, */
             {
                 name: 'bitbucket_list_repository_branches',
                 description: 'Lists branches for a Bitbucket repository.',
@@ -161,24 +161,24 @@ export class McpServerSetup {
                 inputSchema: zodToJsonSchema(GetUserInputSchema),
                 handler: this.createValidatedHandler('bitbucket_get_user_profile', GetUserInputSchema, this.bitbucketUseCase.bitbucketGetUserDetails.bind(this.bitbucketUseCase))
             },
-            {
+            /* {
                 name: 'bitbucket_merge_pull_request',
                 description: 'Merges a Bitbucket pull request',
                 inputSchema: zodToJsonSchema(MergePullRequestInputSchema),
                 handler: this.createValidatedHandler('bitbucket_merge_pull_request', MergePullRequestInputSchema, this.bitbucketUseCase.bitbucketMergePullRequest.bind(this.bitbucketUseCase))
-            },
-            {
+            }, */
+            /* {
                 name: 'bitbucket_decline_pull_request',
                 description: 'Declines a Bitbucket pull request',
                 inputSchema: zodToJsonSchema(DeclinePullRequestInputSchema),
                 handler: this.createValidatedHandler('bitbucket_decline_pull_request', DeclinePullRequestInputSchema, this.bitbucketUseCase.bitbucketDeclinePullRequest.bind(this.bitbucketUseCase))
-            },
-            {
+            }, */
+            /* {
                 name: 'bitbucket_add_pull_request_comment',
                 description: 'Adds a general comment to a Bitbucket pull request',
                 inputSchema: zodToJsonSchema(AddCommentInputSchema),
                 handler: this.createValidatedHandler('bitbucket_add_pull_request_comment', AddCommentInputSchema, this.bitbucketUseCase.bitbucketAddGeneralPullRequestComment.bind(this.bitbucketUseCase))
-            }
+            } */
         ];
 
         this.toolHandlers = new Map();

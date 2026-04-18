@@ -1,11 +1,11 @@
 import * as dtos from '../../domain/contracts/schemas/index.js';
 
 export interface IBitbucketUseCase {
-    bitbucketCreatePullRequest(input: dtos.CreatePullRequestInput): Promise<any>;
+    // bitbucketCreatePullRequest(input: dtos.CreatePullRequestInput): Promise<any>;
     bitbucketGetPullRequestDetails(input: dtos.GetPullRequestInput): Promise<any>;
-    bitbucketMergePullRequest(input: dtos.MergePullRequestInput): Promise<any>;
-    bitbucketDeclinePullRequest(input: dtos.DeclinePullRequestInput): Promise<any>;
-    bitbucketAddGeneralPullRequestComment(input: dtos.AddCommentInput): Promise<any>;
+    // bitbucketMergePullRequest(input: dtos.MergePullRequestInput): Promise<any>;
+    // bitbucketDeclinePullRequest(input: dtos.DeclinePullRequestInput): Promise<any>;
+    // bitbucketAddGeneralPullRequestComment(input: dtos.AddCommentInput): Promise<any>;
     bitbucketGetPullRequestDiff(input: dtos.GetDiffInput): Promise<any>;
     bitbucketGetPullRequestReviews(input: dtos.GetPullRequestInput): Promise<any>;
 
@@ -15,8 +15,8 @@ export interface IBitbucketUseCase {
     bitbucketGetRepositoryDetails(input: dtos.GetRepoInputType): Promise<any>;
     bitbucketGetFileContent(input: dtos.GetFileInputType): Promise<any>;
     bitbucketBrowseDirectory(input: dtos.BrowseDirectoryInputType): Promise<any>;
-    bitbucketCreateBranch(input: dtos.AddBranchInputType): Promise<any>;
-    bitbucketAddPullRequestFileLineComment(input: dtos.AddPrCommentInputType): Promise<any>;
+    // bitbucketCreateBranch(input: dtos.AddBranchInputType): Promise<any>;
+    // bitbucketAddPullRequestFileLineComment(input: dtos.AddPrCommentInputType): Promise<any>;
     bitbucketListRepositoryBranches(input: dtos.ListBranchesInputType): Promise<any>;
 
     bitbucketGetUserDetails(input: dtos.GetUserInputType): Promise<any>;
